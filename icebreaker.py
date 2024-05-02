@@ -1,4 +1,3 @@
-import pygame
 import time
 from graphics import *
 
@@ -33,11 +32,7 @@ class GameWindow(GraphWin):
         self.current_player = 0
         self.players = [Player(self, (0, 2), "red"), Player(self, (5, 2), "blue")]
         self.ice_boxes = set()
-
-        pygame.mixer.init()
-        self.game_over_sound = pygame.mixer.Sound('game_over.wav')
-        self.theme_song = pygame.mixer.Sound('theme.wav')
-
+        
         self.player_info_text = Text(Point(100, self.getHeight() - 100), "PLAYER 0 : [0, 2]\nMOVE")
         self.player_info_text.setSize(14)
         self.player_info_text.draw(self)
@@ -48,8 +43,6 @@ class GameWindow(GraphWin):
 
         self.quit_button_click_count = 0
 
-        self.theme_song.play(loops=-1)
-        self.theme_song.set_volume(0.4)
 
     def wait_until_close(self):
         """
@@ -165,8 +158,6 @@ class GameWindow(GraphWin):
                         if self.is_player_trapped(self.current_player):
                             
                             self.message_display(f"PLAYER {self.current_player} TRAPPED!!")
-                            self.theme_song.stop()
-                            self.game_over_sound.play()
                             time.sleep(2)
                             self.close()
                             return
@@ -218,7 +209,6 @@ class GameWindow(GraphWin):
             self.message_display("Are you sure?")
         elif self.quit_button_click_count == 2:
             self.message_display("Bye")
-            self.theme_song.stop()
             time.sleep(1)
             self.close()
 
@@ -508,7 +498,6 @@ if __name__ == "__main__":
     and manages the game loop, including starting, playing, and ending the game.
     """
     
-    pygame.init()
     
     # Initialize scoreboard
     scoreboard = [0, 0]
@@ -543,7 +532,6 @@ if __name__ == "__main__":
 
         # Game loop for playing the game
         while True:
-            pygame.init()
             game_win = GameWindow("GameWin", 500, 600)
 
             # Initialize buttons on GameWindow
