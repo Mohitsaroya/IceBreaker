@@ -190,11 +190,6 @@ Program Constants:
         Type: Point (from graphics module)
         Purpose: Represents the position of the quit button on the game window.
 
-I also added music to the game to make it a bit more entertaining. The library used for that purpose is called "pygame". Pygame is a python wrapper for SDL, written by Pete Shinners. What this means is that, using pygame, you can write games or other multimedia applications in Python that will run unaltered on any of SDL's supported platforms (Windows, Linux, Mac, and others). Music I used:
-
-	theme.wav: loops throughout the game indefinitely until one of the players gets trapped.
-	game_over.wav: plays when one of the players gets trapped and cant move to any other place
-
 Main Execution:
 
 	The main execution part of the script creates an instance of the GameWindow class named game_win along with buttons (reset_button and quit_button) using the Button class. The script then enters a loop waiting for user input and calls methods to handle the input. The program implements a simple interactive game window with buttons and player objects, organized using object-oriented principles.
