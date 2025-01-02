@@ -250,7 +250,6 @@ class GameWindow(GraphWin):
         self.quit_button_click_count = 0
         self.last_coordinates = None
 
-
 class Player:
     """
     Represents a player in the Icebreaker game.
@@ -273,7 +272,7 @@ class Player:
 
         Parameters:
         - game_win (GameWindow): The game window instance.
-        - position (tuple): The initial position of the player on the game grid.
+        - position (tuple): The player's initial position on the game grid.
         - color (str): The color of the player's circle.
         """
         self.game_win = game_win
@@ -347,7 +346,7 @@ class Button:
     - height (int): Height of the button.
     - rectangle (Rectangle): Graphical representation of the button.
     - labelText (Text): Text label for the button.
-    - callback (function): Callback function to be executed when the button is clicked.
+    - callback (function): The callback function will be executed when the button clicks.
 
     Methods:
     - is_clicked(click_point): Checks if the button is clicked.
@@ -363,7 +362,7 @@ class Button:
         - width (int): Width of the button.
         - height (int): Height of the button.
         - center (Point): Center coordinates of the button.
-        - callback (function): Callback function to be executed when the button is clicked.
+        - callback (function): The callback function will be executed when the button clicks.
         """
         self.game_win = game_win
         self.label = label
@@ -402,7 +401,6 @@ class Button:
         if self.is_clicked(click_point):
             if self.callback.__name__ != 'close':
                 self.callback()
-
 
 class StartWindow(GraphWin):
     """
@@ -445,8 +443,7 @@ class StartWindow(GraphWin):
         """
         Closes the StartWindow to exit the game.
         """
-        self.close()
-        
+        self.close()       
         
 class EndWindow(StartWindow):
     """
@@ -499,9 +496,6 @@ if __name__ == "__main__":
     This script initializes the game windows, handles user interactions,
     and manages the game loop, including starting, playing, and ending the game.
     """
-    
-
-    
     # Initialize scoreboard
     scoreboard = [0, 0]
 
