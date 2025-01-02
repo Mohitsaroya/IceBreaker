@@ -1,4 +1,8 @@
-import time
+#######################################
+# ID# 3132683
+# ICEBREAKER PROJECT MILESTONE 3
+#######################################
+
 from graphics import *
 
 class GameWindow(GraphWin):
@@ -32,7 +36,8 @@ class GameWindow(GraphWin):
         self.current_player = 0
         self.players = [Player(self, (0, 2), "red"), Player(self, (5, 2), "blue")]
         self.ice_boxes = set()
-        
+
+
         self.player_info_text = Text(Point(100, self.getHeight() - 100), "PLAYER 0 : [0, 2]\nMOVE")
         self.player_info_text.setSize(14)
         self.player_info_text.draw(self)
@@ -42,6 +47,7 @@ class GameWindow(GraphWin):
         self.bottom_left_text.draw(self)
 
         self.quit_button_click_count = 0
+
 
 
     def wait_until_close(self):
@@ -158,6 +164,7 @@ class GameWindow(GraphWin):
                         if self.is_player_trapped(self.current_player):
                             
                             self.message_display(f"PLAYER {self.current_player} TRAPPED!!")
+
                             time.sleep(2)
                             self.close()
                             return
@@ -498,6 +505,7 @@ if __name__ == "__main__":
     and manages the game loop, including starting, playing, and ending the game.
     """
     
+
     
     # Initialize scoreboard
     scoreboard = [0, 0]
