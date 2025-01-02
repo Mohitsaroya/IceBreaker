@@ -1,8 +1,3 @@
-#######################################
-# ID# 3132683
-# ICEBREAKER PROJECT MILESTONE 3
-#######################################
-
 from graphics import *
 
 class GameWindow(GraphWin):
