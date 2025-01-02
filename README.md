@@ -68,7 +68,7 @@ The Button class represents a clickable button in the game window.
 * rectangle: Graphics rectangle representing the button.
 * labelText: Text label for the button.
     
-# Methods:
+## Methods:
 
 * __init__(self, game_win, label, width, height, center, callback): Initializes a button with a specified game window, label, dimensions, center, and callback function.
 * is_clicked(self, click_point): Checks if the button is clicked based on mouse coordinates.
