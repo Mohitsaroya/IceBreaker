@@ -25,9 +25,9 @@ GameWindow Class:
         draw_boxes(self): Draws the game grid with white boxes.
         get_clicked_box(self, mouse_x, mouse_y): Returns the coordinates of the clicked box based on mouse coordinates.
         is_player_trapped(self, player_index): Checks if the player is trapped or not.
-	handle_click(self, click_point): Handles mouse clicks, updates the display, and checks if the quit button or reset button is clicked, controls the players' moves on the board and closes the game when one of the players gets trapped.
-        message_display(self, message): Writes messsage at the bottom left corner
-	player_info_message(self, message, col, row): Displays the player's co-ordinates and the message to move when its their turn to move, otherwise any other message
+	handle_click(self, click_point): Handles mouse clicks, updates the display, checks if the quit button or reset button is clicked, controls the players' moves on the board, and closes the game when one of the players gets trapped.
+        message_display(self, message): Writes message at the bottom left corner
+	player_info_message(self, message, col, row): Displays the player's co-ordinates and the message to move when it's their turn to move, otherwise any other message
 	handle_quit_button(self): Handles the quit button click, prompting the user for confirmation and closing the window.
         is_player_overlap(self, position): Checks if the player is overlapping or not
 	display_message(self, message): Displays a message at the bottom of the game window.
@@ -85,11 +85,12 @@ StartWindow (GraphWin) class:
         __init__(self, title, width, height): Initializes a StartWindow object.
         draw_decorations(self): Draws decorative elements on the StartWindow.
         start_game(self): Closes the StartWindow to start the game.
-        exit_game(self):Closes the StartWindow to exit the game.
+        exit_game(self): Closes the StartWindow to exit the game.
         
 
 EndWindow(StartWindow):
     Represents the ending window of the game, inheriting from StartWindow.
+    
     __init__(self, title, width, height, scoreboard): Initializes an EndWindow object.
     draw_scoreboard(self): Draws the scoreboard on the EndWindow.
     get_scoreboard_text(self): Generates the text for the scoreboard.
@@ -141,7 +142,7 @@ Global variables:
     exit_button (Button):
     
         Type: Button
-        Purpose: Represents an instance of the Button class for the exit button in the end game window.
+        Purpose: Represents an instance of the Button class for the exit button in the end-game window.
 
 
 Program Constants:
@@ -173,7 +174,7 @@ Program Constants:
     BUTTON_WIDTH:
 
         Type: int
-        Purpose: Specifies the width of the buttons in the game window.
+        Purpose: Specify the width of the buttons in the game window.
 
     BUTTON_HEIGHT:
 
@@ -195,8 +196,12 @@ Main Execution:
 	The main execution part of the script creates an instance of the GameWindow class named game_win along with buttons (reset_button and quit_button) using the Button class. The script then enters a loop waiting for user input and calls methods to handle the input. The program implements a simple interactive game window with buttons and player objects, organized using object-oriented principles.
 
 REFERENCES:
+
 	Graphics.py version 5: http://mcsp.wartburg.edu/zelle/python/
+
 	Graphics Reference pdf: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
+ 
 	Graphics Reference online: http://mcsp.wartburg.edu/zelle/python/graphics/graphics/index.html
+ 
 	Geeks for Geeks: https://www.geeksforgeeks.org/python-programming-language/?ref=shm_outind
 	
