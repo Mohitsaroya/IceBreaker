@@ -15,26 +15,17 @@ To run the IceBreaker game, follow these steps:
     git clone https://github.com/Mohitsaroya/IceBreaker.git
     ```
 
-2. **Navigate to the Directory**: Change your directory to the cloned repository:
+2. **Install Dependencies**: Install graphics.py python library for the code to run as intended:
     ```bash
-    cd IceBreaker
+    pip install graphics.py
     ```
+3. **Navigate to the Directory**: Go to the directory and open the file titled "icebreaker.py"
 
-3. **Install Dependencies**: Ensure you have Python installed. Then, install any necessary dependencies (if any). You can create a virtual environment if desired:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r requirements.txt  # If there's a requirements file
-    ```
-
-4. **Run the Game**: Run the main script to start the game:
-    ```bash
-    python main.py
-    ```
+4. **Run the Game**: Run the script to start the game
 
 ## Rules:
 
-The game commences with one player making a move on the board. Players can move in vertical, horizontal, or diagonal directions on the grid by one box. After each move, the player must "break the ice" by making one box on the grid inaccessible. Subsequently, the second player takes their turn and similarly breaks the ice following their move. The game progresses until one player becomes trapped, signifying that they are surrounded by broken ice and cannot execute a valid move. In such a scenario, the player who can still make a move is declared the winner.
+The game commences with one player making a move on the board. Players can move vertically, horizontally, or diagonally on the grid by one box. After each move, the player must "break the ice" by making one box on the grid inaccessible. Subsequently, the second player takes their turn and similarly breaks the ice following their move. The game progresses until one player becomes trapped, signifying that they are surrounded by broken ice and cannot execute a valid move. In such a scenario, the player who can still make a move is declared the winner.
 
 
 ## GameWindow Class:
@@ -121,7 +112,7 @@ Represents the starting window of the game.
 
 # EndWindow(StartWindow):
 
-Represents the ending window of the game, inheriting from StartWindow.
+It represents the ending window of the game, which is inherited from StartWindow.
     
 * __init__(self, title, width, height, scoreboard): Initializes an EndWindow object.
 * draw_scoreboard(self): Draws the scoreboard on the EndWindow.
